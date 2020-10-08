@@ -1,0 +1,27 @@
+n=1
+while n<1000000:
+    n=n+1
+    if len(str(n))<2:
+        nstr = '00000'+str(n)
+   #    print(nstr[5])
+    elif len(str(n))<3:
+        nstr = '0000' + str(n)
+   #    print(nstr)
+    elif len(str(n))<4:
+        nstr = '000' + str(n)
+   #    print(nstr)
+    elif len(str(n))<5:
+        nstr = '00' + str(n)
+   #    print(nstr)
+    elif len(str(n)) < 6:
+        nstr = '0' + str(n)
+        nnstr = '0' + str(n+1)
+        if nstr[1] == nstr[5] and nstr[2] == nstr[4] and nnstr[1] == nnstr[5] and nnstr[2] == nnstr[4]:
+          print(nstr)
+    elif len(str(n))==6:
+        nstr = str(n)
+        nnstr = str(n + 1)
+        nnnstr = str(n + 2)
+        nnnnstr = str(n + 3)
+        if nstr[1] == nstr[5] and nstr[2] == nstr[4] and nnstr[1] == nnstr[5] and nnstr[2] == nnstr[4] and nnnstr[1] == nnnstr[4] and nnnstr[2] == nnnstr[3] and nnnnstr[0] == nnnnstr[5]:
+            print(nstr)
